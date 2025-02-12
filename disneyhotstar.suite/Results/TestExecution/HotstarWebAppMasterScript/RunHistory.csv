@@ -1,0 +1,12 @@
+﻿Date Run,Status,Time,# of Errors,# of Warnings,# of Exceptions,Log File,Return Value,Error Message,# of Successes
+2025-02-11 15:47:32.503 +0530,"Success",0:00:00,0,0,0,"20250211_154732.503/LogFile.txt","","",1
+2025-02-11 15:48:19.292 +0530,"Success",0:00:00,0,0,0,"20250211_154819.292/LogFile.txt","","",1
+2025-02-11 15:49:45.830 +0530,"Success",0:00:00,0,0,0,"20250211_154945.830/LogFile.txt","","",1
+2025-02-11 15:51:51.705 +0530,"Success",0:00:00,0,0,0,"20250211_155151.705/LogFile.txt","","",1
+2025-02-11 15:52:36.245 +0530,"Success",0:00:00,0,0,0,"20250211_155236.245/LogFile.txt","","",1
+2025-02-11 15:53:16.360 +0530,"Success",0:00:00,0,0,0,"20250211_155316.360/LogFile.txt","","",1
+2025-02-11 15:54:31.460 +0530,"Aborted",0:00:04,1,0,0,"20250211_155431.460/LogFile.txt","","",0
+2025-02-11 15:55:33.202 +0530,"Failure",0:00:02,1,0,1,"20250211_155533.202/LogFile.txt","","No Remote Connection -- typetext Error - Remote Connection Unavailable",0
+2025-02-11 15:56:09.693 +0530,"Aborted",0:00:29,1,0,0,"20250211_155609.693/LogFile.txt","","",3
+2025-02-11 15:58:01.985 +0530,"Failure",0:00:02,1,0,1,"20250211_155801.985/LogFile.txt","","No Remote Connection -- typetext Error - Remote Connection Unavailable",0
+2025-02-11 16:01:25.380 +0530,"Failure",0:00:02,1,0,1,"20250211_160125.380/LogFile.txt","","No Remote Connection -- typetext Error - Remote Connection Unavailable",0

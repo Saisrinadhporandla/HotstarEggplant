@@ -1,0 +1,22 @@
+﻿(* * 
+this Suite contails all the functions that are related to launching the home page of disney hot star 
+and all the home page related functions
+ * *)
+
+(*
+this handler used to launch sales force web application
+*)
+to LaunchHotstar 
+	#reads the data from excel
+	"Properties/TestData".readDataInExcel
+	wait 2
+	#launches the browser
+	"Utilities/commonUtilities".launchURL "Chrome",Universal hotstarData.URL,"Icons/chrome/hotstarLogo","topHalf"
+	log universal hotstarData.URL
+end LaunchHotstar
+
+
+
+
+
+

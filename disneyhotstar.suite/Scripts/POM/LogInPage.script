@@ -1,0 +1,33 @@
+﻿(* * 
+this Script contains all the functions related to hotstar Login page 
+**)
+
+(*
+this handler used to validate error message if user tries to watch with out log in
+*)
+to ValidateLoginError
+	if ImageFound(text:"Login to watch for free",waitFor:0)
+		#validates the error msg
+		"Utilities/commonUtilities".validate "Login to watch for free","middle"
+	else
+		"Utilities/commonUtilities".validate "Login or sign up to continue","topHalf"
+	end if
+	
+end ValidateLoginError
+
+(*
+this handler used to log in to the hotstar apllication using OTP
+*)
+to LogInHotstarUsingOTP mobileNumber
+	#navigates to my space
+	"Utilities/hotstarCommonUtilities".navigatetoMySpace
+	"Utilities/commonUtilities".clickElement "Log In","middle","topHalf","Login or sign up to continue"
+	#enters mobile number
+	"Utilities/commonUtilities".textEntry "Enter mobile number", Universal hotstarData.(mobileNumber),"middle",[0,10]
+	"Utilities/commonUtilities".clickElement "Get OTP","bottomHalf","middle","Enter OTP sent to +91"& Universal hotstarData.(mobileNumber)
+	#asks user OTP and enters 
+	"Utilities/commonUtilities".askUserInPut "OTP","Enter OTP","middle",[0,50]
+	#clicks on continue and verifies log successs message
+	"Utilities/commonUtilities".clickElement "Continue","bottomHalf","footerSection","Logged in Successfully"
+end LogInHotstarUsingOTP
+

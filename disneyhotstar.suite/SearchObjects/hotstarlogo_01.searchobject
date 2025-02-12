@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		26,
+		131,
+		52,
+		25
+	],
+	"lastmodifieddate": 1738752440.924,
+	"createddate": 1738752437.326,
+	"name": "hotstarlogo_01",
+	"lastfounddate": 1739269986.7389998,
+	"ocrcapturestring": "•jotstar",
+	"lastfoundlocation": [
+		26,
+		131,
+		52,
+		25
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[26,12]",
+					"Tolerance": "_71",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Icons/chrome/hotstarLogo/hotstarlogo_01.png",
+				"connectionname": "192.168.1.81",
+				"type": 1,
+				"connectionserverid": "192.168.1.81",
+				"capturerect": [
+					26,
+					131,
+					52,
+					25
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "•jotstar"
+			}
+	]
+}

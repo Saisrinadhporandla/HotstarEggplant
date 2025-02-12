@@ -1,0 +1,52 @@
+{
+	"entries": [
+		{
+				"message": "Running TestExecution/HotstarWebAppMasterScript.script",
+				"identifier": "START",
+				"timestamp": "2025-02-11 15:54:31.474 +0530"
+			},
+		{
+				"handlerName": "on_readdatainexcel",
+				"timestamp": "2025-02-11 15:54:31.966 +0530",
+				"message": "{_pk_:1001, mobilenumber:9704219395, moviename:\"Salaar: Part 1 - Ceasefire\", url:\"https://www.hotstar.com/\"}",
+				"scriptName": "Properties/TestData.script",
+				"handlerLine": 4,
+				"identifier": "Log"
+			},
+		{
+				"handlerName": "on_readdatainexcel",
+				"timestamp": "2025-02-11 15:54:31.990 +0530",
+				"message": "https://www.hotstar.com/",
+				"scriptName": "Properties/TestData.script",
+				"handlerLine": 5,
+				"identifier": "Log"
+			},
+		{
+				"handlerName": "on_launchurl",
+				"timestamp": "2025-02-11 15:54:34.236 +0530",
+				"message": "[windowsKey]r",
+				"scriptName": "Utilities/commonUtilities.script",
+				"handlerLine": 3,
+				"identifier": "typetext"
+			},
+		{
+				"handlerName": "on_launchurl",
+				"timestamp": "2025-02-11 15:54:35.965 +0530",
+				"message": "Chrome https://www.hotstar.com/[returnKey]",
+				"scriptName": "Utilities/commonUtilities.script",
+				"handlerLine": 4,
+				"identifier": "typetext"
+			},
+		{
+				"message": "(Duration:\"4.654\", Errors:\"1\", Exceptions:\"0\", StartTime:\"2025-02-11 15:54:31 +0530\", Successes:\"0\", TestCase:\"TestExecution/HotstarWebAppMasterScript.script\", Warnings:\"0\")",
+				"identifier": "EndTestCase",
+				"timestamp": "2025-02-11 15:54:36.147 +0530"
+			},
+		{
+				"message": "Execution Time 0:00:04 TestExecution/HotstarWebAppMasterScript.script",
+				"identifier": "ABORTED",
+				"timestamp": "2025-02-11 15:54:36.227 +0530"
+			}
+	],
+	"createdTimestamp": "2025-02-11 15:54:31.482 +0530"
+}

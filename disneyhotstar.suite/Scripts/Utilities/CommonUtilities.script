@@ -1,0 +1,108 @@
+﻿
+(*
+this handler used to ask user input add type it in the desired place
+*)
+
+to askUserInPut inputToAsk,label, SR, offset:("Properties/sections"().offset().nullOffset)
+	Ask input  title "Enter Input" message "please enter "
+	put it into inputValue
+	if inputValue is not empty then
+		wait 1
+		textEntry label,inputValue, SR, offset
+	else
+		log "input Value is empty"
+	end if
+end askUserInPut
+
+
+
+(*
+this handler used to launch the browser
+*)
+to launchURL browser,url,expectation,SR
+	set global browser to browser
+	typetext windowskey,"r"
+	typetext browser&&url,returnkey
+	validate expectation,SR
+end launchURL
+
+(*
+this handler used to click the element in the UI based up on the requirments
+*)
+to clickElement label,SR,SR2,expectation,offset
+	if SR is not a list then put "Properties/sections"().searchAreas.(SR) into SR
+	if SR2 is not a list then put "Properties/sections"().searchAreas.(SR2) into SR2
+	if offset is not empty 
+		click the center of scrollTo(label,SR)+offset
+	else
+		if file (suiteinfo().imagesFolder&"/"&label) exists then set text to "Image"
+		log text
+		click {waitfor:5,(text):label,ignoreNewlines:on, ignorespaces:off,searchRectangle:SR,dpi:144}
+	end if 
+	wait 0.5
+	moveto[0,0]
+	if expectation is not empty then validate expectation,SR2
+	wait 1 
+end clickElement
+
+(*
+this handler used to type text in the desired location
+*)
+to textEntry label,input, SR, offset:("Properties/sections"().offset().nullOffset)
+	if SR is not a list then put "Properties/sections"().searchAreas.(SR) into SR
+	click (Center of scrollTo(label, SR) + offset)
+	wait 0.5
+	typetext controlkey,"a"
+	typetext input
+	wait 0.3
+end textEntry
+
+(*
+this handler used to validate the values
+*)
+on validate values,SR,wait_for:"20"
+	wait 2
+	if SR is not a list then put "Properties/sections"().searchAreas.(SR) into SR
+	repeat for each item val in values 
+		if file (suiteinfo().imagesFolder&"/"&val) exists  then set text to "Image"  
+		wait 1
+		assert that imagefound(waitfor:wait_for,(text):val,searchRectangle:SR,ignoreNewlines:on,ignorespaces:on,DpI:144) with val
+		log "Success : ( "&quote&val&quote&" is successfully displayed on the screen.)"
+	end repeat 
+end validate
+
+(*
+this handler used to scroll to find the desired text or image
+*)
+to scrollTo toFind, SR , scroll:"Down",scrollSpeed:5
+	// Images 
+	if SR is not a list then put "Properties/sections"().searchAreas.(SR) into SR
+	set the remoteWorkInterval to 0.1
+	if file (suiteinfo().imagesFolder&"/"&toFind&".png") exists
+		repeat until imagefound(0,image:toFind,searchRectangle:SR)
+			ScrollWheelDown scrollSpeed
+			wait 1
+			if repeatindex() > 10 then 
+				logerror "Cannot find"&&toFind
+				Exit repeat
+			end if
+		end repeat
+	else
+		// OCR
+		repeat until imagefound(waitfor:0,text:toFind,searchRectangle:SR, ignoreNewlines:on, ignorespaces:on)
+			log the textstyle
+			if scroll equal to "UP" then
+				ScrollWheelUp scrollSpeed
+			else
+				ScrollWheelDown scrollSpeed
+			end if
+			wait 1
+			if repeatindex() > 10 then 
+				logerror "Cannot find"&&toFind
+				Exit repeat
+			end if
+		end repeat
+	end if
+	set the remoteWorkInterval to 0.4
+	return foundimageinfo().imageRectangle 
+end scrollTo

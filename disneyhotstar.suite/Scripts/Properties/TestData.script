@@ -1,0 +1,11 @@
+﻿
+(*
+this handler reads the data in the excel file and utilized when required
+*)
+to readDataInExcel
+	#excel file path location
+	set fileName = ResourcePath("DisneyHotStarTestData.xlsx")
+	set universal hotstarData to item 1 of (the records of {type: "excel",file:fileName,name:"Sheet1",writable:"Yes"})
+	log universal hotstarData	
+	log universal hotstarData.URL
+end readDataInExcel

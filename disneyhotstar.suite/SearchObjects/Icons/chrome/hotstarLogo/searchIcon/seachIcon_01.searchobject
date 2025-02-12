@@ -1,0 +1,46 @@
+{
+	"lastmodifieddate": 1738755113.681,
+	"lastfoundlocation": [
+		40,
+		436,
+		17,
+		16
+	],
+	"originalcapturelocation": [
+		37,
+		452,
+		27,
+		16
+	],
+	"createddate": 1738755113.681,
+	"lastfounddate": 1739269987.0679998,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[13,8]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Icons/chrome/hotstarLogo/searchIcon/seachIcon_01.png",
+				"connectionname": "192.168.1.81",
+				"type": 1,
+				"capturerect": [
+					37,
+					452,
+					27,
+					16
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "192.168.1.81"
+			}
+	],
+	"name": "Icons/chrome/hotstarLogo/searchIcon/seachIcon_01"
+}

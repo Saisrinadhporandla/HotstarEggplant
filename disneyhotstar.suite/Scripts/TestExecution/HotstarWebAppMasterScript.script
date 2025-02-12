@@ -1,0 +1,49 @@
+﻿connect "192.168.1.81"
+ValidateErrorWithOutLogin
+AddProfileInHotstar
+WatchMovieAndremoveHistory
+(*
+this handler used to validate wheather user able to see error message is he tries to play any movie with out log in
+*)
+to ValidateErrorWithOutLogin
+	#launches hotstar web application
+	"POM/HomePage".launchHotstar
+	#searchs for the movie
+	"Utilities/hotstarCommonUtilities".searchMovie "Salaar","movieName"
+	#plays the movie
+	"Utilities/hotstarCommonUtilities".playMovie
+	#validates the error message 
+	"POM/LogInPage".validateLoginError
+end ValidateErrorWithOutLogin
+
+
+(*
+this handler used to add new profiles 
+*)
+to AddProfileInHotstar
+	"POM/HomePage".launchHotstar
+	#log in to the hotstar account with mobile number
+	"POM/LogInPage". logInHotstarUsingOTP "mobileNumber"
+	#adds new profile
+	"POM/mySpacePage".addProfile "Demopro"
+end AddProfileInHotstar
+
+(*
+this handler used to watch a particular movie and remove it from continue watching
+*)
+to WatchMovieAndremoveHistory
+	"POM/HomePage".launchHotstar
+	"Utilities/hotstarCommonUtilities".searchMovie "Salaar","movieName"
+	"Utilities/hotstarCommonUtilities".playMovie
+	#verifies whether movie is playing or not
+	"Utilities/hotstarCommonUtilities".verifyMoviePlay "movieName"
+	#navigates to myspace and remove the movie watch history from continue watching
+	"POM/mySpacePage".removeContinueWatching "movieName"
+	#logouts from the current hotstar accoount
+	"Utilities/HotstarCommonUtilities".logoutHotstar
+end WatchMovieAndremoveHistory
+
+
+
+
+

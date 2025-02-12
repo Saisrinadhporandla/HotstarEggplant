@@ -1,0 +1,83 @@
+﻿(*
+this handler used to search for a particular movie
+*)
+to SearchMovie movieName,expectation
+	#navigates to search menu
+	"Utilities/commonUtilities".clickElement "Icons/chrome/searchIcon","hamburgSection","headerSection","Movies,shows and more"
+	#Enters the movie name
+	"Utilities/commonUtilities".textEntry "shows and more",movieName,"headerSection"
+	"Utilities/commonUtilities".validate Universal hotstarData.(expectation) ,"topHalf"
+end SearchMovie
+
+(*
+this handler used to play a particular movie
+*)
+to PlayMovie
+	put "Properties/sections"().searchAreas.("middle") into SR
+	if ImageFound(text:"Resume",waitFor:0,SearchRectangle:SR) then
+		resumeMovie
+	else
+		"Utilities/commonUtilities".clickElement "Watch Now","topHalf"
+	end if
+end PlayMovie
+
+(*
+this handler used to resume and continue watching the movie
+*)
+to ResumeMovie
+	#validates whether resume buttom visable or not
+	"Utilities/commonUtilities".validate "Resume","topHalf"
+	#clicks on resume buttom 
+	"Utilities/commonUtilities".clickElement "Resume","topHalf"
+end ResumeMovie
+
+
+(*
+this handler used to navigate to my space 
+*)
+to NavigatetoMySpace 
+	#if account is logedin it will run this statement
+	if ImageFound(image:"Icons/chrome/mySpaceIconAfterLogIn",waitFor:0) then
+		"Utilities/commonUtilities".clickElement "Icons/chrome/mySpaceIconAfterLogIn","hamburgSection","topHalf","profiles"
+	else
+		#if account is not loged it will run this statement
+		"Utilities/commonUtilities".clickElement "Icons/chrome/mySpaceIcon","hamburgSection","middle","Log In"
+	end if
+end NavigatetoMySpace
+
+(*
+this handler used to verify whether the selected movie is playing or not
+*)
+to VerifyMoviePlay movieName
+	#validates Rated A while playing movie
+	"Utilities/commonUtilities".validate "Rated A","headerSection"
+	#enables full screen
+	Typetext controlKey,"f"
+	#validates the movie name
+	"Utilities/commonUtilities".validate Universal hotstarData.(movieName),"movieScreenValidationSection"
+	try
+		
+		Typetext spacebar	 
+		"Utilities/commonUtilities".validate "Audio & Subtitles","movieScreenValidationSection"
+	catch
+		Typetext spacebar	
+		"Utilities/commonUtilities".validate "Audio & Subtitles","movieScreenValidationSection"
+	end try
+	wait 1
+	Typetext spacebar
+	#Exit from the movie
+	"Utilities/commonUtilities".clickElement "Icons/chrome/backButton","topHalf","topHalf","TOP RESULT"
+end verifyMoviePlay
+
+(*
+this handler used to log out hot star account
+*)
+to logoutHotstar 
+	#navigates to settings page
+	"Utilities/commonUtilities".clickElement "Help & Settings","headerSection","headerSection","Registered Mobile Number"
+	"Utilities/commonUtilities".clickElement "Log Out","middle","middle","Are you sure you want to log out?"
+	set the textStyle to {caseSensitive:"Yes"}
+	#clicks on log out button and verifies whether logged out or not
+	"Utilities/commonUtilities".clickElement "Log Out","bottomHalf","footerSection","Device Logged Out Successfully"
+	set TextStyle to Empty
+end logoutHotstar

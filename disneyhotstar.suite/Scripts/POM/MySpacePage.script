@@ -1,0 +1,36 @@
+﻿(*
+this handler used to add new profile in hotstar
+*)
+to AddProfile profileName,accountType
+	#navigates to my space
+	"Utilities/hotstarCommonUtilities".navigatetoMySpace
+	"Utilities/commonUtilities".clickElement "Add","topHalf","headerSection","Create Profile",[0,-40]
+	"Utilities/commonUtilities".textEntry "your Name",profileName,"middle"
+	#if account type is kids it will enable kidsmode
+	if accountType is equal to "kids" then
+		"Utilities/commonUtilities".clickElement "is this for kids","middle",,,[250,10]
+		#clicks create kids profile
+		"Utilities/commonUtilities".clickElement "Create kids Profile","bottomHalf","middle",profileName
+	else
+		#clicks create  profile
+		"Utilities/commonUtilities".clickElement "Create Your Profile","bottomHalf","middle",profileName
+	end if
+end AddProfile
+
+(*
+this handler used to remove continue watching history for a particular movie
+*)
+to RemoveContinueWatching movieName
+	#navigates to my space
+	"Utilities/hotstarCommonUtilities".navigatetoMySpace
+	#validates continue watching
+	"Utilities/commonUtilities".validate "Continue Watching for You","middle"
+	#validates movie name
+	"Utilities/commonUtilities".validate  Universal hotstarData.(movieName) ,"bottomHalf"
+	log  Universal hotstarData.(movieName)
+	MoveTo text: Universal hotstarData.(movieName)
+	#clicks on cancel button and verifies whether it is removed or not
+	"Utilities/commonUtilities".clickElement "Icons/chrome/deleteHistoryIcon","middle","footerSection","Removed from Continue Watching"
+end RemoveContinueWatching
+
+

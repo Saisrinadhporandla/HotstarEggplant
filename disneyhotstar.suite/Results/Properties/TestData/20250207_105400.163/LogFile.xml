@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+ <testsuite name="Properties/TestData_script" package="disneyhotstar.suite" timestamp="2025-02-07 10:54:00.163 +0530"
+ tests="1"  failures="1" errors="0" time="0.240000">
+  <properties>
+   <property name="RunDate" value="2025-02-07 10:54:00.163 +0530"/>
+   <property name="Status" value="Failure"/>
+  </properties>
+  <testcase name="Properties/TestData.script" assertions="1" status="failure"  time="0.223">
+    <failure type="FAILURE" message="STUnknownMessage: ERROR: No Such Function: &apos;mobilenumber&apos; -- Execution Time 0:00:00 Properties/TestData.script" />
+  </testcase>
+ </testsuite>
+</testsuites>

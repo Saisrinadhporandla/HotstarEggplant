@@ -1,0 +1,44 @@
+{
+	"entries": [
+		{
+				"message": "Running TestExecution/HotstarWebAppMasterScript.script",
+				"identifier": "START",
+				"timestamp": "2025-02-11 15:55:33.221 +0530"
+			},
+		{
+				"handlerName": "on_readdatainexcel",
+				"timestamp": "2025-02-11 15:55:33.479 +0530",
+				"message": "{_pk_:1001, mobilenumber:9704219395, moviename:\"Salaar: Part 1 - Ceasefire\", url:\"https://www.hotstar.com/\"}",
+				"scriptName": "Properties/TestData.script",
+				"handlerLine": 4,
+				"identifier": "Log"
+			},
+		{
+				"handlerName": "on_readdatainexcel",
+				"timestamp": "2025-02-11 15:55:33.510 +0530",
+				"message": "https://www.hotstar.com/",
+				"scriptName": "Properties/TestData.script",
+				"handlerLine": 5,
+				"identifier": "Log"
+			},
+		{
+				"handlerName": "on_launchurl",
+				"timestamp": "2025-02-11 15:55:35.554 +0530",
+				"message": "Remote Connection Unavailable",
+				"scriptName": "Utilities/commonUtilities.script",
+				"handlerLine": 3,
+				"identifier": "Exception"
+			},
+		{
+				"message": "(Duration:\"2.391\", Errors:\"1\", Exceptions:\"1\", StartTime:\"2025-02-11 15:55:33 +0530\", Successes:\"0\", TestCase:\"TestExecution/HotstarWebAppMasterScript.script\", Warnings:\"0\")",
+				"identifier": "EndTestCase",
+				"timestamp": "2025-02-11 15:55:35.628 +0530"
+			},
+		{
+				"message": "No Remote Connection: typetext Error - Remote Connection Unavailable -- Execution Time 0:00:02 TestExecution/HotstarWebAppMasterScript.script",
+				"identifier": "FAILURE",
+				"timestamp": "2025-02-11 15:55:35.797 +0530"
+			}
+	],
+	"createdTimestamp": "2025-02-11 15:55:33.231 +0530"
+}

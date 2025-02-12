@@ -1,0 +1,21 @@
+{
+	"entries": [
+		{
+				"message": "Running Properties/TestData.script",
+				"identifier": "START",
+				"timestamp": "2025-02-07 10:54:00.173 +0530"
+			},
+		{
+				"message": "(Duration:\"0.223\", Errors:\"1\", Exceptions:\"0\", StartTime:\"2025-02-07 10:54:00 +0530\", Successes:\"0\", TestCase:\"Properties/TestData.script\", Warnings:\"0\")",
+				"identifier": "EndTestCase",
+				"timestamp": "2025-02-07 10:54:00.410 +0530"
+			},
+		{
+				"image": "Screen_Error.png",
+				"message": "STUnknownMessage: ERROR: No Such Function: 'mobilenumber' -- Execution Time 0:00:00 Properties/TestData.script",
+				"identifier": "FAILURE",
+				"timestamp": "2025-02-07 10:54:00.619 +0530"
+			}
+	],
+	"createdTimestamp": "2025-02-07 10:54:00.178 +0530"
+}

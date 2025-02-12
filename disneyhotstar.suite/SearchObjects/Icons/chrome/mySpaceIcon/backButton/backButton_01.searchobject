@@ -1,0 +1,46 @@
+{
+	"lastmodifieddate": 1738841518.8109999,
+	"lastfoundlocation": [
+		47,
+		57,
+		15,
+		15
+	],
+	"originalcapturelocation": [
+		45,
+		141,
+		17,
+		19
+	],
+	"createddate": 1738841518.8109999,
+	"lastfounddate": 1739248210.54,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[8,9]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Icons/chrome/mySpaceIcon/backButton/backButton_01.png",
+				"connectionname": "192.168.1.81",
+				"type": 1,
+				"capturerect": [
+					45,
+					141,
+					17,
+					19
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "192.168.1.81"
+			}
+	],
+	"name": "Icons/chrome/mySpaceIcon/backButton/backButton_01"
+}

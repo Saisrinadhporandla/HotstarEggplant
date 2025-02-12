@@ -1,0 +1,21 @@
+﻿
+(*
+returns the search area when it calls with the search Area name
+*)
+return{
+	searchAreas: 
+	{
+		tophalf:[0,0,1920,555],
+		bottomHalf:[0,525,1920,1080],
+		headerSection:[4,85,1920,349],
+		middle:[4,381,1920,727],
+		footerSection:[0,803,1920,1038],
+		hamburgSection:[3,311,229,832],
+		movieScreenValidationSection:[0,0,1920,174]
+	},
+	offset:
+	{
+		nullOffset:[0,0]
+	}
+}
+

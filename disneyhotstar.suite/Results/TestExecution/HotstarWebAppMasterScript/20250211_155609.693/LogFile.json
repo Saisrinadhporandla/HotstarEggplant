@@ -1,0 +1,177 @@
+{
+	"entries": [
+		{
+				"message": "Running TestExecution/HotstarWebAppMasterScript.script",
+				"identifier": "START",
+				"timestamp": "2025-02-11 15:56:09.711 +0530"
+			},
+		{
+				"handlerName": "on_readdatainexcel",
+				"timestamp": "2025-02-11 15:56:10.403 +0530",
+				"message": "{_pk_:1001, mobilenumber:9704219395, moviename:\"Salaar: Part 1 - Ceasefire\", url:\"https://www.hotstar.com/\"}",
+				"scriptName": "Properties/TestData.script",
+				"handlerLine": 4,
+				"identifier": "Log"
+			},
+		{
+				"handlerName": "on_readdatainexcel",
+				"timestamp": "2025-02-11 15:56:10.456 +0530",
+				"message": "https://www.hotstar.com/",
+				"scriptName": "Properties/TestData.script",
+				"handlerLine": 5,
+				"identifier": "Log"
+			},
+		{
+				"handlerName": "on_launchurl",
+				"timestamp": "2025-02-11 15:56:13.025 +0530",
+				"message": "[windowsKey]r",
+				"scriptName": "Utilities/commonUtilities.script",
+				"handlerLine": 3,
+				"identifier": "typetext"
+			},
+		{
+				"handlerName": "on_launchurl",
+				"timestamp": "2025-02-11 15:56:14.860 +0530",
+				"message": "Chrome https://www.hotstar.com/[returnKey]",
+				"scriptName": "Utilities/commonUtilities.script",
+				"handlerLine": 4,
+				"identifier": "typetext"
+			},
+		{
+				"handlerName": "on_validate",
+				"timestamp": "2025-02-11 15:56:18.233 +0530",
+				"scriptName": "Utilities/commonUtilities.script",
+				"message": "found at (52, 143)",
+				"image": "Icons/chrome/hotstarLogo",
+				"handlerLine": 7,
+				"identifier": "imagefound"
+			},
+		{
+				"handlerName": "on_validate",
+				"timestamp": "2025-02-11 15:56:18.245 +0530",
+				"message": "Assertion Succeeded: Icons/chrome/hotstarLogo(true: imagefound(waitfor:wait_for,(text):val,searchRectangle:SR,ignoreNewlines:on,ignorespaces:on,DpI:144))",
+				"scriptName": "Utilities/commonUtilities.script",
+				"handlerLine": 7,
+				"identifier": "LogSuccess"
+			},
+		{
+				"handlerName": "on_validate",
+				"timestamp": "2025-02-11 15:56:18.466 +0530",
+				"message": "Success : ( \"Icons/chrome/hotstarLogo\" is successfully displayed on the screen.)",
+				"scriptName": "Utilities/commonUtilities.script",
+				"handlerLine": 8,
+				"identifier": "Log"
+			},
+		{
+				"handlerName": "on_launchhotstar",
+				"timestamp": "2025-02-11 15:56:18.651 +0530",
+				"message": "https://www.hotstar.com/",
+				"scriptName": "POM/HomePage.script",
+				"handlerLine": 5,
+				"identifier": "Log"
+			},
+		{
+				"handlerName": "on_clickelement",
+				"timestamp": "2025-02-11 15:56:19.142 +0530",
+				"message": "Image",
+				"scriptName": "Utilities/commonUtilities.script",
+				"handlerLine": 8,
+				"identifier": "Log"
+			},
+		{
+				"handlerName": "on_clickelement",
+				"timestamp": "2025-02-11 15:56:19.755 +0530",
+				"scriptName": "Utilities/commonUtilities.script",
+				"message": "at (50, 444)",
+				"image": "Icons/chrome/searchIcon",
+				"handlerLine": 9,
+				"identifier": "click"
+			},
+		{
+				"handlerName": "on_clickelement",
+				"timestamp": "2025-02-11 15:56:20.484 +0530",
+				"message": "at (0, 0)",
+				"scriptName": "Utilities/commonUtilities.script",
+				"handlerLine": 12,
+				"identifier": "moveto"
+			},
+		{
+				"handlerName": "on_validate",
+				"timestamp": "2025-02-11 15:56:34.652 +0530",
+				"scriptName": "Utilities/commonUtilities.script",
+				"message": "found at (218, 149)",
+				"image": "(TEXT:\"Movies\")",
+				"handlerLine": 7,
+				"identifier": "imagefound"
+			},
+		{
+				"handlerName": "on_validate",
+				"timestamp": "2025-02-11 15:56:34.660 +0530",
+				"message": "Assertion Succeeded: Movies(true: imagefound(waitfor:wait_for,(text):val,searchRectangle:SR,ignoreNewlines:on,ignorespaces:on,DpI:144))",
+				"scriptName": "Utilities/commonUtilities.script",
+				"handlerLine": 7,
+				"identifier": "LogSuccess"
+			},
+		{
+				"handlerName": "on_validate",
+				"timestamp": "2025-02-11 15:56:34.862 +0530",
+				"message": "Success : ( \"Movies\" is successfully displayed on the screen.)",
+				"scriptName": "Utilities/commonUtilities.script",
+				"handlerLine": 8,
+				"identifier": "Log"
+			},
+		{
+				"handlerName": "on_validate",
+				"timestamp": "2025-02-11 15:56:36.361 +0530",
+				"scriptName": "Utilities/commonUtilities.script",
+				"message": "found at (341, 150)",
+				"image": "(TEXT:\"shows and more\")",
+				"handlerLine": 7,
+				"identifier": "imagefound"
+			},
+		{
+				"handlerName": "on_validate",
+				"timestamp": "2025-02-11 15:56:36.366 +0530",
+				"message": "Assertion Succeeded: shows and more(true: imagefound(waitfor:wait_for,(text):val,searchRectangle:SR,ignoreNewlines:on,ignorespaces:on,DpI:144))",
+				"scriptName": "Utilities/commonUtilities.script",
+				"handlerLine": 7,
+				"identifier": "LogSuccess"
+			},
+		{
+				"handlerName": "on_validate",
+				"timestamp": "2025-02-11 15:56:36.495 +0530",
+				"message": "Success : ( \"shows and more\" is successfully displayed on the screen.)",
+				"scriptName": "Utilities/commonUtilities.script",
+				"handlerLine": 8,
+				"identifier": "Log"
+			},
+		{
+				"handlerName": "function_scrollto",
+				"timestamp": "2025-02-11 15:56:38.150 +0530",
+				"message": "REMOTEWORKINTERVAL = 0.1",
+				"scriptName": "Utilities/commonUtilities.script",
+				"handlerLine": 4,
+				"identifier": "set"
+			},
+		{
+				"handlerName": "function_scrollto",
+				"timestamp": "2025-02-11 15:56:38.495 +0530",
+				"scriptName": "Utilities/commonUtilities.script",
+				"message": "found at (341, 150)",
+				"image": "(TEXT:\"shows and more\")",
+				"handlerLine": 16,
+				"identifier": "imagefound"
+			},
+		{
+				"message": "(Duration:\"29.246\", Errors:\"1\", Exceptions:\"0\", StartTime:\"2025-02-11 15:56:09 +0530\", Successes:\"3\", TestCase:\"TestExecution/HotstarWebAppMasterScript.script\", Warnings:\"0\")",
+				"identifier": "EndTestCase",
+				"timestamp": "2025-02-11 15:56:38.969 +0530"
+			},
+		{
+				"message": "Execution Time 0:00:29 TestExecution/HotstarWebAppMasterScript.script",
+				"identifier": "ABORTED",
+				"timestamp": "2025-02-11 15:56:38.999 +0530"
+			}
+	],
+	"createdTimestamp": "2025-02-11 15:56:09.718 +0530"
+}

@@ -1,0 +1,44 @@
+{
+	"entries": [
+		{
+				"message": "Running POM/HomePage.script",
+				"identifier": "START",
+				"timestamp": "2025-02-05 16:13:51.497 +0530"
+			},
+		{
+				"handlerName": "on_testdata",
+				"timestamp": "2025-02-05 16:13:51.737 +0530",
+				"message": "https://www.hotstar.com/",
+				"scriptName": "Properties/testData.script",
+				"handlerLine": 3,
+				"identifier": "Log"
+			},
+		{
+				"handlerName": "on_launchurl",
+				"timestamp": "2025-02-05 16:13:51.831 +0530",
+				"message": "[windowsKey]r",
+				"scriptName": "Utilities/commonUtilities.script",
+				"handlerLine": 4,
+				"identifier": "typetext"
+			},
+		{
+				"handlerName": "on_launchurl",
+				"timestamp": "2025-02-05 16:13:53.539 +0530",
+				"message": "chrome https://www.hotstar.com/[returnKey]",
+				"scriptName": "Utilities/commonUtilities.script",
+				"handlerLine": 5,
+				"identifier": "typetext"
+			},
+		{
+				"message": "(Duration:\"2.137\", Errors:\"0\", Exceptions:\"0\", StartTime:\"2025-02-05 16:13:51 +0530\", Successes:\"1\", TestCase:\"POM/HomePage.script\", Warnings:\"0\")",
+				"identifier": "EndTestCase",
+				"timestamp": "2025-02-05 16:13:53.672 +0530"
+			},
+		{
+				"message": "Execution Time 0:00:02 POM/HomePage.script",
+				"identifier": "SUCCESS",
+				"timestamp": "2025-02-05 16:13:53.800 +0530"
+			}
+	],
+	"createdTimestamp": "2025-02-05 16:13:51.511 +0530"
+}

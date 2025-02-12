@@ -1,0 +1,7 @@
+﻿2025-02-11 15:54:31.474 +0530	START		Running TestExecution/HotstarWebAppMasterScript.script
+2025-02-11 15:54:31.966 +0530	Log		{_pk_:1001, mobilenumber:9704219395, moviename:"Salaar: Part 1 - Ceasefire", url:"https://www.hotstar.com/"}	4	on_readdatainexcel	Properties/TestData.script
+2025-02-11 15:54:31.990 +0530	Log		https://www.hotstar.com/	5	on_readdatainexcel	Properties/TestData.script
+2025-02-11 15:54:34.236 +0530	typetext		[windowsKey]r	3	on_launchurl	Utilities/commonUtilities.script
+2025-02-11 15:54:35.965 +0530	typetext		Chrome https://www.hotstar.com/[returnKey]	4	on_launchurl	Utilities/commonUtilities.script
+2025-02-11 15:54:36.147 +0530	EndTestCase		(Duration:"4.654", Errors:"1", Exceptions:"0", StartTime:"2025-02-11 15:54:31 +0530", Successes:"0", TestCase:"TestExecution/HotstarWebAppMasterScript.script", Warnings:"0")
+2025-02-11 15:54:36.227 +0530	ABORTED		Execution Time 0:00:04 TestExecution/HotstarWebAppMasterScript.script
