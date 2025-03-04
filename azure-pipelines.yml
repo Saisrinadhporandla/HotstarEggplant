@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  poolname : SrinadhPool
 
 steps:
 - script: echo Hello, world!
