@@ -1,8 +1,4 @@
 # Starter pipeline
-- task: eggplant-runner@2
-  inputs:
-    daiVersion: '7.5.0-10'
-    testConfig: 'ById'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -21,3 +17,12 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+- task: eggplant-runner@2
+  inputs:
+    daiVersion: '25.1.0+3'
+    serverURL: 'https://eggplant-partners.dai.eggplant.cloud/'
+    testConfig: 'ById'
+    testConfigID: '6460e358-7fc3-4c0e-9774-2e684ee56419'
+    clientID: 'client:dai:api:integration:6e80ada4-6e14-40d5-b79e-4b7eb1254bcc'
+    clientSecret: 'JJ037ns4Eq6EEHTPJVkhPsZwgPIzWK2A'
