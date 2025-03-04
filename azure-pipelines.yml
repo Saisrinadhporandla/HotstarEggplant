@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  poolname : SrinadhPool
+  agentname : SrinadhAzure
 
 steps:
 - script: echo Hello, world!
